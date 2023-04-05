@@ -6,7 +6,8 @@
 <center><h1 class="title">Click on any painting for more details</h1></center>
 <div class="gallery_div">
    {% for painting in paintings %}
-   <a href="{{ painting.url }}"><img class="gallery_img" src="{{ painting.image }}"> </a>
+   <img class="gallery_img" src="{{ painting.image }}">
+   <p> {{painting.title}}</p>
    {% endfor %}
 </div>
 {% endblock %}
