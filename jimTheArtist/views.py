@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 import random
 from .models import Painting
 
@@ -12,3 +12,7 @@ def gallery(request):
     shuffled_paintings = list(paintings)
     random.shuffle(shuffled_paintings)
     return render(request, 'gallery.html', {'paintings': shuffled_paintings})
+
+def painting(request, painting_name):
+    painting = get_object_or_404(Painting, id=painting_name)
+    return render(request, 'painting.html', {'painting': painting})
