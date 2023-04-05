@@ -1,0 +1,82 @@
+body {
+    background-color: rgba(141, 198, 198, 0.79);
+    font-family:'Courier New', Courier, monospace;
+  }
+  
+  
+  .title {
+    font-family: cursive;
+  }
+  .selfie {
+      border: 0px solid #ffffff;
+      max-width: 100%;
+      border-radius: 25px;
+      margin-bottom: 10px;
+  }
+  
+  .about_me_div {
+      background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url('/static/images/SpringScene.jpg') ;
+      background-size: cover;
+      margin-left: 10px;
+      border: 0px solid #ffffff;
+      border-radius: 25px;
+      padding-bottom: 10px;
+      margin-bottom: 10px;
+  }
+  
+  .about_me_text {
+    padding-left: 10PX;
+  }
+  
+  .about_me_header {
+    padding-left: 10PX;
+    color: rgb(54, 0, 105);
+  }
+  
+  
+  
+  
+  .contact_text {
+    font-size: large;
+  }
+  
+  .grid-container {
+    display: grid;
+  }
+  .gallery_text {
+      background-size: cover;
+      float: right;
+      width: 65%;
+      margin-left: 10px;
+  }
+  
+  .contact-selfie {
+    border: 5px solid #ffffff;
+    border-radius: 25px;
+  }
+  
+  .button_div {
+    width: 50%;
+  }
+  
+  .gallery_texter {
+    width: 65%;
+  }
+  .gallery_img {
+      width:30%;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  * {
+      box-sizing: border-box;
+    }
+    
+  
+  
+  

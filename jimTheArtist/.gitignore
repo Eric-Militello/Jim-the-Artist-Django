@@ -1,0 +1,35 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Local development settings
+*.env
+*.log
+*.sqlite3
+
+# Static files
+/staticfiles/
+/media/
+
+# Other generated files
+.idea/
+.vscode/
+node_modules/
+*.iml
+*.pydevproject
+*.pyc
+*.orig
+
+# Ignore migrations except __init__.py
+**/migrations/*
+!**/migrations/__init__.py
+
+# Ignore secret keys
+*.secret
+
+# Ignore pipenv virtual environment
+/.venv/
+
+# Ignore mypy cache
+.mypy_cache/
