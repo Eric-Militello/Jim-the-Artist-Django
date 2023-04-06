@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block content %}
 <div class="container">
     <div class="row">
@@ -33,7 +33,7 @@
             </div>
         </div>
         <div class="col-md-5">
-            <img class="selfie d-none d-md-block" src="/static/imgs/selfie2.jpg" alt="Selfie" style="max-width:100%;">
+            <img class="selfie d-none d-md-block" src="{% static 'imgs/selfie2.jpg' %}" alt="Selfie" style="max-width:100%;">
         </div>
     </div>
 </div>
