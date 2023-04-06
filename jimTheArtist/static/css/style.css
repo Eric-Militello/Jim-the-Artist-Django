@@ -34,11 +34,7 @@ body {
   }
   
   
-  
-  
-  .contact_text {
-    font-size: large;
-  }
+
   
   .grid-container {
     display: grid;
@@ -50,10 +46,7 @@ body {
       margin-left: 10px;
   }
   
-  .contact-selfie {
-    border: 5px solid #ffffff;
-    border-radius: 25px;
-  }
+  
   
   .button_div {
     width: 50%;
@@ -67,13 +60,6 @@ body {
   }
   
   
-  textarea {
-    width: 100%;
-    max-width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    resize: vertical;
-  }
 
 
   
