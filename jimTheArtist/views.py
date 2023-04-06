@@ -31,7 +31,7 @@ def contact(request):
                     f"New message from {name} ({email})",
                     message,
                     email,
-                    ['ericmilitellcooding@gmail.com'],
+                    ['ericmilitellocoding@gmail.com'],
                     fail_silently=False,
                 )
                 # add a success message
