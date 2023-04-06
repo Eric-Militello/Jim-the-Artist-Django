@@ -3,6 +3,18 @@
 {% load static %}
 
 
+
+{% if messages %}
+
+    {% for message in messages %}
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+      {{message}}
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {% endfor %}
+  
+{% endif %}
+
 <h1 class="title text-center mt-5">Contact Information</h1>
 <div class="container mt-5">
   <div class="row">

@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.core.mail import send_mail
+from django.contrib import messages
 import random
 from .models import Painting
 from .apps import ContactForm
@@ -24,15 +25,22 @@ def contact(request):
             email = form.cleaned_data['email']
             message = form.cleaned_data['message']
             # send the email
-            send_mail(
-                f"New message from {name} ({email})",
-                message,
-                email,
-                ['ericmilitellocoding@gmail.com'],
-                fail_silently=False,
-            )
-            # redirect to a success page
-            return render(request, 'contact.html')
+            try:
+                # send the email
+                send_mail(
+                    f"New message from {name} ({email})",
+                    message,
+                    email,
+                    ['ericmilitellcooding@gmail.com'],
+                    fail_silently=False,
+                )
+                # add a success message
+                messages.success(request, 'Your message was successfully sent!')
+            except Exception as e:
+                # add an error message
+                messages.error(request, 'There was an error sending your message. Please try again later.')
+
+            return render(request, 'contact.html', {'form': form})
     else:
         form = ContactForm()
     return render(request, 'contact.html', {'form': form})
