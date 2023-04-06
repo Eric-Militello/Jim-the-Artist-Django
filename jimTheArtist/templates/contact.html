@@ -9,6 +9,11 @@
     <div class="col-md-4 order-sm-2 order-lg-1 order-md-1">
       <div class="shadow-lg p-3 mb-5 bg-body-tertiary rounded">
         <h3>Send me a message here</h3>
+        <form method="post">
+          {% csrf_token %}
+          {{ form.as_p }}
+          <button type="submit">Send</button>
+      </form>
         
       </div>
     </div>

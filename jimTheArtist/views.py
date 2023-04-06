@@ -1,6 +1,8 @@
 from django.shortcuts import render, get_object_or_404
+from django.core.mail import send_mail
 import random
 from .models import Painting
+from .apps import ContactForm
 
 def home(request):
     return render(request, 'home.html')
@@ -14,7 +16,26 @@ def gallery(request):
     return render(request, 'gallery.html', {'paintings': shuffled_paintings})
 
 def contact(request):
-    return render(request, 'contact.html')
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            # process the form data
+            name = form.cleaned_data['name']
+            email = form.cleaned_data['email']
+            message = form.cleaned_data['message']
+            # send the email
+            send_mail(
+                f"New message from {name} ({email})",
+                message,
+                email,
+                ['ericmilitellocoding@gmail.com'],
+                fail_silently=False,
+            )
+            # redirect to a success page
+            return render(request, 'contact.html')
+    else:
+        form = ContactForm()
+    return render(request, 'contact.html', {'form': form})
 
 
 
