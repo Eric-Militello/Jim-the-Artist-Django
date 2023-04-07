@@ -66,7 +66,8 @@ def painting(request, painting_name):
     
     #add $ for display
     else:
-        painting.price = '$' + str(painting.price) 
+        painting.price = '${:,.0f}'.format(painting.price)
+
 
     #convert length and width from inches to cm for display
     length_cm = str(painting.length * 2.54) + 'cm'
