@@ -60,11 +60,12 @@ quotes = [
 
 def painting(request, painting_name):
     painting = get_object_or_404(Painting, title=painting_name)
-    #price value of 0 or less represents a painting is not for sale
-    if painting.price <= 0:
+    #price value of 0 painting is sold. less than 0 represents a painting is not for sale
+    if painting.price == 0:
+        painting.price = 'Sold'
+    elif  painting.price < 0:
         painting.price = 'Not For Sale'
-    
-    #add $ for display
+    #add $ and commas for display
     else:
         painting.price = '${:,.0f}'.format(painting.price)
 
@@ -72,6 +73,9 @@ def painting(request, painting_name):
     #convert length and width from inches to cm for display
     length_cm = str(painting.length * 2.54) + 'cm'
     height_cm = str(painting.height * 2.54)  + 'cm' 
+
+
+    
     return render(request, 'painting.html', {'painting': painting, 
                                              'quote': random.choice(quotes), 
                                              'length_cm': length_cm,

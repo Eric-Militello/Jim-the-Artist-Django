@@ -10,8 +10,9 @@
             <div class="shadow-lg p-3 mb-5 bg-body-tertiary rounded">
               <div class="mb-3">
                 <h1 class="h2 mb-2 painting-title">{{ painting.title }} <span class="price-text h5"> {{ painting.price }}</span></h1>
-                <p class="size-text"> {{painting.size}}</p>
-                <p class="small size-text mb-3">{{ painting.length }}" X {{painting.height}}" | {{length_cm}} X {{height_cm}}</p>
+                <br/>
+                <p class="small size-text mb-3">{{ painting.length }}" X {{painting.height}}" | {{length_cm}} X {{height_cm}} </p>
+                <p class="small size-text mb-3">Medium: {{ painting.medium}} </p>
                 <p class="small painting-text">{{ painting.description }}</p>
               </div>
               <div class="d-flex justify-content-between mb-3">
