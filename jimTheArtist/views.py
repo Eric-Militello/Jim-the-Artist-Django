@@ -35,6 +35,8 @@ def contact(request):
                     fail_silently=False,
                 )
                 # add a success message
+                # clear the form fields
+                form = ContactForm()
                 messages.success(request, 'Your message was successfully sent!')
             except Exception as e:
                 # add an error message
@@ -58,4 +60,20 @@ quotes = [
 
 def painting(request, painting_name):
     painting = get_object_or_404(Painting, title=painting_name)
-    return render(request, 'painting.html', {'painting': painting, 'quote': random.choice(quotes)})
+    #price value of 0 or less represents a painting is not for sale
+    if painting.price <= 0:
+        painting.price = 'Not For Sale'
+    
+    #add $ for display
+    else:
+        painting.price = '$' + str(painting.price) 
+
+    #convert length and width from inches to cm for display
+    length_cm = str(painting.length * 2.54) + 'cm'
+    height_cm = str(painting.height * 2.54)  + 'cm' 
+    return render(request, 'painting.html', {'painting': painting, 
+                                             'quote': random.choice(quotes), 
+                                             'length_cm': length_cm,
+                                             'height_cm': height_cm 
+                                             }
+                                             )
