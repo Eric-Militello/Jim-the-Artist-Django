@@ -15,7 +15,7 @@ body {
   }
   
   .about_me_div {
-      background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url('..\static\imgs\pondView.jpg') ;
+      background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url('../imgs/pondView.jpg') ;
       background-size: cover;
       margin-left: 10px;
       border: 0px solid #ffffff;
