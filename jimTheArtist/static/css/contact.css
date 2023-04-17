@@ -8,3 +8,10 @@
     font-size: large;
     width: 100%;
   }
+
+  .bi-instagram {
+    background: linear-gradient(135deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+    color: rgb(255, 255, 255);
+    border-radius: 50%;
+    padding: 5px;
+  }
