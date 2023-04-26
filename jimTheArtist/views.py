@@ -9,11 +9,11 @@ def home(request):
     return render(request, 'home.html')
 
 def gallery(request):
-    # Retrieve all paintings from the database
-    paintings = Painting.objects.all()
+    # Retrieve all active paintings from the database
+    paintings = Painting.objects.filter(active=True)
     # Randomize order of paintings
     shuffled_paintings = list(paintings)
-    random.shuffle(shuffled_paintings)
+    #random.shuffle(shuffled_paintings)
     return render(request, 'gallery.html', {'paintings': shuffled_paintings})
 
 def contact(request):
@@ -72,13 +72,13 @@ def painting(request, painting_name):
 
     #convert length and width from inches to cm for display
     length_cm = str(painting.length * 2.54) + 'cm'
-    height_cm = str(painting.height * 2.54)  + 'cm' 
+    height_cm = str(painting.height * 2.54)  + 'cm'
 
 
-    
-    return render(request, 'painting.html', {'painting': painting, 
-                                             'quote': random.choice(quotes), 
+
+    return render(request, 'painting.html', {'painting': painting,
+                                             'quote': random.choice(quotes),
                                              'length_cm': length_cm,
-                                             'height_cm': height_cm 
+                                             'height_cm': height_cm
                                              }
                                              )

@@ -4,6 +4,7 @@ from django.db import models
 
 class Painting(models.Model):
     title = models.CharField(max_length=100)
+    active = models.BooleanField()
     description = models.TextField()
     medium = models.TextField()
     length = models.IntegerField()

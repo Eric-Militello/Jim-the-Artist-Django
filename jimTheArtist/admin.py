@@ -1,5 +1,7 @@
 from django.contrib import admin
 from .models import Painting
 
-# Register your models here.
-admin.site.register(Painting)
+class PaintingAdmin(admin.ModelAdmin):
+    list_display = ('title', 'active')
+
+admin.site.register(Painting, PaintingAdmin)

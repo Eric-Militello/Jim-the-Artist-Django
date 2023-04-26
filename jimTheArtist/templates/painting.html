@@ -15,7 +15,7 @@
               <div class="mb-3">
                 <h1 class="h2 mb-2 painting-title">{{ painting.title }} <span class="price-text h5"> {{ painting.price }}</span></h1>
                 <br/>
-                <p class="small size-text mb-3">{{ painting.length }}" X {{painting.height}}" | {{length_cm}} X {{height_cm}} </p>
+                <p class="small size-text mb-3">{{ painting.height }}" X {{painting.length}}" | {{height_cm}} X {{length_cm}} </p>
                 <p class="small painting-text">{{ painting.description }}</p>
                 <br/>
                 <p class="small medium-text mb-3">Medium: {{ painting.medium}} </p>
@@ -23,8 +23,8 @@
               <div class="d-flex justify-content-between mb-3">
                 <a href="{% url 'gallery' %}" class="btn btn-warning btn-lg mr-3">Back to Gallery!</a>
                 <a href="{% url 'contact' %}" class="btn btn-warning btn-lg">Contact Me</a>
-              </div> 
-              <br/>           
+              </div>
+              <br/>
               <p class="small mb-0 quote-text">{{ quote }}</p>
             </div>
           </div>

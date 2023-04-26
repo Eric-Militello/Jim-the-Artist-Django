@@ -1,11 +1,11 @@
 body {
     background-color: rgba(141, 198, 198, 0.79);
-    font-family:Arial, Helvetica, sans-serif;
+    font-family:sans-serif, Helvetica, Arial;
   }
-  
-  
+
+
   .title {
-    font-family: cursive;
+    font-family: sans-serif, Helvetica, Arial;
   }
   .selfie {
       border: 0px solid #ffffff;
@@ -13,29 +13,30 @@ body {
       border-radius: 25px;
       margin-bottom: 10px;
   }
-  
+
   .about_me_div {
       background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url('../imgs/pondView.jpg') ;
       background-size: cover;
       margin-left: 10px;
       border: 0px solid #ffffff;
       border-radius: 25px;
-      padding-bottom: 10px;
+      padding: 10px;
       margin-bottom: 10px;
   }
-  
+
   .about_me_text {
     padding-left: 10PX;
+    font-weight: bold;
   }
-  
+
   .about_me_header {
     padding-left: 10PX;
     color: rgb(54, 0, 105);
   }
-  
-  
 
-  
+
+
+
   .grid-container {
     display: grid;
   }
@@ -45,31 +46,30 @@ body {
       width: 65%;
       margin-left: 10px;
   }
-  
-  
-  
+
+
+
   .button_div {
     width: 50%;
   }
-  
+
   .gallery_texter {
     width: 65%;
   }
   .gallery_img {
       width:30%;
   }
-  
-  
 
 
-  
-  
-  
-  
+
+
+
+
+
+
   * {
       box-sizing: border-box;
     }
-    
-  
-  
-  
+
+
+

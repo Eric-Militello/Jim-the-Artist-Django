@@ -4,7 +4,7 @@
     width: auto;
     object-fit: scale-down; /* Preserve the aspect ratio of the image */
     display: block;
-  
+
   }
 
   .col-md-6.d-flex {
@@ -21,9 +21,8 @@
 
 .painting-title {
     color: black;
-    font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
-    
+
 }
 
 .painting-text {
@@ -33,7 +32,7 @@
 
 .size-text {
     color: rgb(3, 19, 163);
-    font-size: large; 
+    font-size: large;
 }
 
 .medium-text {
